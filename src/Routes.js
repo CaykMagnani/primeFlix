@@ -6,7 +6,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function RoutesApp() {
   return (
     <BrowserRouter>
-    <Header />
+        <Header />
     <Routes>
       <Route path='/' element={<Home />} />
       <Route path='/Filme/:id' element={<Filme />} />
