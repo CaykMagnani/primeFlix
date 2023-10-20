@@ -6,7 +6,7 @@ function Header() {
     <header>
 
       <div className='logo'>
-        <img src='https://img.freepik.com/vetores-premium/filme-preto-logotipo-design-premium_39063-25.jpg' alt='logoEcommerce'/>
+        <img src='https://st3.depositphotos.com/4326917/35050/v/450/depositphotos_350504178-stock-illustration-movie-folder-sign-icon-as.jpg' alt='logoEcommerce'/>
       </div>
 
       <Link className='linkSemSublinhado' to="/Filme/oi">
