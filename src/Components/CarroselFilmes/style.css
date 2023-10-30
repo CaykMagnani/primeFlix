@@ -1,8 +1,15 @@
 .lista-filmes {
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
-  }
+    overflow: auto;
+}
+
+.loading{
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
   
 .art {
     flex: 0 0 auto;

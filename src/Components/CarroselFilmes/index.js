@@ -11,6 +11,8 @@ function CarroselFilmes(props) {
     const filmeFinal = props.filmeFinal;
 
     const [filmes, setFilmes] = useState([]);
+    const [loading, setloading] = useState(true);
+
 
     useEffect(() => {
         async function loadFilmes() {
@@ -22,9 +24,19 @@ function CarroselFilmes(props) {
                 }
             })
             setFilmes(response.data.results.slice(filmeInicial, filmeFinal))
+
+            setloading(false)
         }
         loadFilmes();
     }, []);
+
+    if(loading) {
+        return (
+            <div className='loading'>
+                <h1>Carregando...</h1>
+            </div>
+        )
+    }
 
     return (
         <div className='conteiner'>
