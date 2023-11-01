@@ -1,41 +1,48 @@
-header {
-    height: 140px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    display: flex;
-    justify-content: space-between; /* Alinha os elementos à direita e à esquerda */
-    align-items: center;
-    overflow-y: hidden;
-    overflow-x: auto;
-  }
-  
-  header a {
-    color: rgb(255, 255, 255);
-    font-size: 20px;
-    overflow-x: auto;
-  }
-  
-  .linkSemSublinhado {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  button {
-    margin-right: 15px;
-    font-size: 20px;
-    height: 60px;
-  }
-  
-  .logo {
-    margin-top: 8px;
-    height: 90%;
-    width: 25%;
-    margin-left: 2%;
-  }
-  
-  .logo img {
-    width: 70px;
-    height: 80%;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.headerFixo {
+  top: 0;
+  height: 120px;
+  width: 100%;
+  background-color: #313131cc;
+  /* Cor de fundo com opacidade (0.5) */
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  /* Alinha os elementos à direita e à esquerda */
+  align-items: center;
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+
+header a {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  overflow-x: auto;
+}
+
+.linkSemSublinhado {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'Bebas Neue', sans-serif;
+  margin-right: 15px;
+  font-size: 30px;
+  height: 80px;
+  color: white;
+  background-color: #4b0e0e;
+}
+
+.logo {
+  margin-top: 8px;
+  height: 90%;
+  width: 25%;
+  margin-left: 2%;
+}
+
+.logo img {
+  width: 70px;
+  height: 80%;
+}

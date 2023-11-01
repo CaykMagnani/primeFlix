@@ -1,8 +1,31 @@
 body{
-  background-color: #f1f1f1;
+  background-color: #313131;
   font-family: sans-serif;
   margin: 0;
   box-sizing: border-box;
   height: 100%;
   width: 100%;
+  overflow:auto;
+}
+
+
+/* Estilização da barra de rolagem em navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4b0e0e; /* Cor da alça da barra de rolagem */
+  border-radius: 6px; /* Arredondar a alça */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #313131; /* Cor de fundo da barra de rolagem */
+}
+
+/* Estilização da barra de rolagem em navegadores Firefox */
+/* Nota: Firefox suporta a propriedade scrollbar-color */
+* {
+  scrollbar-color: #4b0e0e #313131;
 }

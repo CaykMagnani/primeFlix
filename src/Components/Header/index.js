@@ -2,11 +2,16 @@ import './style.css';
 import { Link } from "react-router-dom";
 
 function Header() {
+  
   return (
-    <header>
+    <header className='headerFixo'>
 
       <div className='logo'>
-        <img src='https://st3.depositphotos.com/4326917/35050/v/450/depositphotos_350504178-stock-illustration-movie-folder-sign-icon-as.jpg' alt='logoEcommerce'/>
+        
+        <Link to="/">
+          <img src='https://st3.depositphotos.com/4326917/35050/v/450/depositphotos_350504178-stock-illustration-movie-folder-sign-icon-as.jpg' alt='logoEcommerce' />
+        </Link>
+
       </div>
 
       <Link className='linkSemSublinhado' to="/Filme/oi">
@@ -18,7 +23,7 @@ function Header() {
       </Link>
 
     </header>
-    
+
   )
 }
 

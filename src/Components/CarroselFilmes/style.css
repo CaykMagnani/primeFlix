@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.conteiner h1{
+    margin-left: 1.2%;
+    font-size: 6.5vh;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
 .lista-filmes {
     display: flex;
     flex-wrap: nowrap;
