@@ -30,7 +30,7 @@ function CarroselFilmes(props) {
         loadFilmes();
     }, []);
 
-    if(loading) {
+    if (loading) {
         return (
             <div className='loading'>
                 <h1>Carregando...</h1>
@@ -46,21 +46,21 @@ function CarroselFilmes(props) {
                     return (
                         <article className='art' key={filme.id}>
 
-                            <Link to={`/filme/${filme.id}`}>
+                            <div className="card-map">
 
-                                <div className="card-map">
+                                <div className='cardInteira'>
 
-                                    <div className='cardInteira'>
-
-                                        <div className='image'>
+                                    <div className='image'>
+                                        
+                                        <Link to={`/filme/${filme.id}`}>
                                             <img className='img' src={`https://image.tmdb.org/t/p/original${filme.poster_path}`} alt='imagemProduto' />
-                                        </div>
+                                        </Link>
 
                                     </div>
 
                                 </div>
 
-                            </Link>
+                            </div>
 
                         </article>
                     )

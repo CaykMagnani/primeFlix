@@ -2,6 +2,15 @@ import './style.css';
 import { Link } from "react-router-dom";
 
 function Header() {
+
+  window.addEventListener('scroll', function() {
+    const headerFixado = document.querySelector('.headerFixo');
+    if (window.scrollY > 100) { 
+      headerFixado.classList.add('fixed');
+    } else {
+      headerFixado.classList.remove('fixed');
+    }
+  });
   
   return (
     <header className='headerFixo'>
