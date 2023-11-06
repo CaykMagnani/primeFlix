@@ -60,7 +60,13 @@ function Filme() {
           <strong>Avaliação: {filme.vote_average} / 10 </strong>
 
           <div className="botoes">
-            <button className="botao">Ver Trailer</button>
+
+            <button className="botao">
+              <a target="blank" rel="external" href={`https://www.youtube.com/results?search_query=${filme.title} trailer`}>
+                Ver Trailer
+              </a>
+            </button>
+
             <button className="botao">Salvar</button>
           </div>
 

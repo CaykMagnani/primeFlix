@@ -82,3 +82,8 @@
     background-color: #4b0e0e;
     color: white;
 }
+
+.botao a{
+    text-decoration: none;
+    color: white;
+}
