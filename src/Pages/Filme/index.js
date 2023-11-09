@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useParams, Navigate, useNavigate } from "react-router-dom";
-import './style.css';
+import './filme.css';
 
 import api from '../../Services/api'
 
@@ -35,6 +35,20 @@ function Filme() {
     }
   }, [])
 
+  function salvarFilme(){
+    const minhaLista = localStorage.getItem("@primeflix");
+    let filmesSalvos = JSON.parse(minhaLista) || [];
+    const hasFilmes = filmesSalvos.some((filmesSalvo) => filmesSalvo.id === filme.id)
+
+    if(hasFilmes){
+      alert("FILME JÁ ADICIONADO");
+      return;
+    }
+    filmesSalvos.push(filme);
+    localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
+    alert("FILME SALVO COM SUCESSO!!")
+  }
+
   if (loading) {
     return (
       <div className='loading'>
@@ -67,7 +81,7 @@ function Filme() {
               </a>
             </button>
 
-            <button className="botao">Salvar</button>
+            <button onClick={salvarFilme} className="botao">Salvar</button>
           </div>
 
         </div>

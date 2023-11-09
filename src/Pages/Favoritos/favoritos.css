@@ -1,0 +1,10 @@
+.PaginaFavoritos {
+    display: flex;
+    margin-top: 24px;
+    align-items: center;
+}
+.Card {
+    background-color: aqua;
+    height: 500px;
+    width: auto;
+}

@@ -23,7 +23,7 @@ function Header() {
 
       </div>
 
-      <Link className='linkSemSublinhado' to="/Filme/oi">
+      <Link className='linkSemSublinhado' to="/Favoritos">
 
         <button>
           Meus filmes
