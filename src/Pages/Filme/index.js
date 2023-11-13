@@ -3,6 +3,7 @@ import { useParams, Navigate, useNavigate } from "react-router-dom";
 import './filme.css';
 
 import api from '../../Services/api'
+import { toast } from "react-toastify";
 
 function Filme() {
   const { id } = useParams();
@@ -33,7 +34,7 @@ function Filme() {
     return () => {
       console.log("COMPONENT DESMONTADO")
     }
-  }, [])
+  }, [Navigate, id])
 
   function salvarFilme(){
     const minhaLista = localStorage.getItem("@primeflix");
@@ -41,12 +42,12 @@ function Filme() {
     const hasFilmes = filmesSalvos.some((filmesSalvo) => filmesSalvo.id === filme.id)
 
     if(hasFilmes){
-      alert("FILME JÁ ADICIONADO");
+      toast.warn("FILME JÁ ADICIONADO");
       return;
     }
     filmesSalvos.push(filme);
     localStorage.setItem("@primeflix", JSON.stringify(filmesSalvos));
-    alert("FILME SALVO COM SUCESSO!!")
+    toast.success("FILME SALVO COM SUCESSO!!")
   }
 
   if (loading) {

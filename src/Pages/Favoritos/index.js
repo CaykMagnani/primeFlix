@@ -11,32 +11,51 @@ function Favoritos() {
         setFilmes(JSON.parse(minhaLista) || []);
     }, [])
 
+    function excluirFilme(id){
+        let filtroFilmes = filmes.filter( (item) => {
+            return(item.id !== id)
+        })
+
+        setFilmes(filtroFilmes);
+        localStorage.setItem("@primeflix", JSON.stringify(filtroFilmes))
+    }
+
     return (
-        <div className='paginaFavoritos'>
+        <div className='conteinerF'>
 
-            <h1>Meus Filmes Favoritos</h1>
+            <h1>Meus Favoritos</h1>
 
-            <ul>
+            {filmes.length === 0 && <span className='AvisoF'>Você não tem Filmes Favoritados...</span>}
+        
+            <div className='lista-filmesF'>
+
                 {filmes.map((item) => {
                     return(
-                        <div className='Card'>
+                        <article className='artF' key={item.id}>
 
-                        <li key={item.id}>
+                        <div className="card-mapF">
 
-                            <span className='Titulo'>{item.title}</span>
+                            <div className='cardInteiraF'>
 
-                            <div className='Detalhes'>
-                                <Link to={`/filme/${item.id}`}><div className='VerDetalhes'>Ver Detalhes</div></Link>
-                                <button className='BotaoExcluir'>Excluir</button>
+                                <div className='imageF'>
+                                    
+                                    <Link to={`/filme/${item.id}`}>
+                                        <img className='img' src={`https://image.tmdb.org/t/p/original${item.poster_path}`} alt={item.title} />
+                                    </Link>
+
+                                </div>
+
                             </div>
 
-                        </li>
-                        </div>
-                    )
-                })} 
-            </ul>
+                            <button onClick={() => excluirFilme(item.id)}>Exluir</button>
 
-        </div>
+                        </div>
+
+                    </article>
+                    )
+                })}
+                </div>
+            </div>
     );
 }
 

@@ -1,10 +1,72 @@
-.PaginaFavoritos {
-    display: flex;
-    margin-top: 24px;
-    align-items: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.AvisoF{
+    margin-left: 30%;
+    font-size: 6.5vh;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
 }
-.Card {
-    background-color: aqua;
-    height: 500px;
-    width: auto;
+
+.conteinerF{
+    margin-top: 100px;
+}
+
+h1{
+    margin-left: 1.2%;
+    font-size: 6.5vh;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.lista-filmesF {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+  
+.artF {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    min-width: 300px;
+  }
+  
+.cardInteiraF{
+    background-color: white;
+    height: 430px;
+    width: 300px;
+    border: solid 2px;
+    border-radius: 2%;
+    word-wrap: break-word;
+    margin: 2%;
+    overflow: hidden;
+}
+
+.imageF{
+    width: 100%;
+    height: 100%;
+}
+.imageF img{
+    width: 100%;
+    height: 100%;
+}
+
+.card-mapF{
+    justify-content: center;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.botao{
+    width: 15vh;
+    font-size: 3vh;
+    background-color: #4b0e0e;
+    color: white;
+}
+
+.botao a{
+    text-decoration: none;
+    color: white;
 }
